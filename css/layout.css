@@ -1,0 +1,45 @@
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+section {
+  padding: var(--section-gap) 0;
+  position: relative;
+}
+
+section + section {
+  border-top: 1px solid var(--col-border);
+}
+
+.parallax-bg {
+  will-change: transform;
+}
+
+.section-label {
+  font-size: var(--body-sm);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--col-accent);
+  margin-bottom: calc(var(--space) * 4);
+  display: flex;
+  align-items: center;
+  gap: calc(var(--space) * 2);
+}
+
+.section-label::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: var(--col-accent);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--h2);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--col-ink);
+  max-width: 22ch;
+}

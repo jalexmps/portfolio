@@ -1,0 +1,27 @@
+:root {
+  --space: 8px;
+
+  --col-bg:        #F9F7F4;
+  --col-surface:   #F0EDE8;
+  --col-ink:       #1A1714;
+  --col-ink-muted: #6B6560;
+  --col-accent:    #C05A2A;
+  --col-accent-lt: #F2E0D5;
+  --col-border:    #E3DDD7;
+  --col-card-bg:   #FFFFFF;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  --h1: clamp(3rem, 7vw, 7rem);
+  --h2: clamp(2rem, 4vw, 3.5rem);
+  --h3: clamp(1.25rem, 2vw, 1.75rem);
+  --body-lg: clamp(1rem, 1.2vw, 1.125rem);
+  --body-sm: 0.9rem;
+
+  --section-gap: clamp(80px, 12vw, 160px);
+  --container: min(1200px, 92vw);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

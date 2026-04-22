@@ -1,0 +1,66 @@
+@media (max-width: 1024px) {
+  .cs-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-card:first-child {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .case-card:first-child .card-image {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 300px;
+  }
+  .case-card:first-child .card-body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: calc(var(--space) * 10);
+  }
+  .overlay-body {
+    grid-template-columns: 1fr;
+  }
+  .overlay-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .overlay-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: calc(var(--space) * 2);
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-images {
+    grid-template-columns: 1fr;
+  }
+  .about-img:first-child {
+    margin-top: 0;
+  }
+  .card-metrics {
+    gap: calc(var(--space) * 3);
+  }
+}

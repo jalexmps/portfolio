@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Alexandre Sousa — Senior Product Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/case-studies.css" />
+  <link rel="stylesheet" href="css/overlay.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- PAGE CURTAIN -->
+  <div id="curtain" role="presentation" aria-hidden="true"></div>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Back to top">João Alexandre</a>
+    <ul class="nav-links">
+      <li><a href="#case-studies">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-inner">
+        <p class="hero-role">Senior Product Designer · UX/UI</p>
+        <h1 id="hero-heading" class="hero-tagline">
+          Turning complexity into <em>human clarity</em>
+        </h1>
+        <p class="hero-bio">
+          Product designer from Portugal with 6+ years leading UX and UI across web, mobile, and TV.
+        </p>
+        <div class="hero-cta">
+          <button class="btn" onclick="document.getElementById('case-studies').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to featured case studies">
+            <span>View My Work</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M7 1v12M1 7l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="hero-stats" aria-label="Quick stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value">6+</span>
+            <span class="hero-stat-label">Years of experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">20+</span>
+            <span class="hero-stat-label">Projects led</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">1M+</span>
+            <span class="hero-stat-label">Users impacted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+        Scroll to explore
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CASE STUDIES ─── -->
+  <section id="case-studies" aria-labelledby="cs-heading">
+    <div class="container">
+      <div class="cs-header reveal">
+        <div>
+          <p class="section-label">Featured Work</p>
+          <h2 id="cs-heading" class="section-title">Three projects. Real problems. Measurable impact.</h2>
+        </div>
+        <button class="btn btn--accent" onclick="alert('All work coming soon')" aria-label="View all projects">
+          <span>All Projects</span>
+        </button>
+      </div>
+
+      <div class="cs-grid">
+
+        <!-- Card 1 — Featured -->
+        <article class="case-card reveal" role="article" onclick="openCaseStudy('nosid')" tabindex="0" aria-label="Open case study: NOS ID Authentication Redesign">
+          <div class="card-body">
+            <div>
+              <div class="card-logo" aria-label="NOS logo placeholder">NOS</div>
+            </div>
+            <div>
+              <p class="card-tagline">NOS ID — Authentication Redesign</p>
+              <p class="card-desc">Redesigned the single sign-on platform gating all NOS digital products — turning a broken, trust-eroding flow into a seamless passwordless experience.</p>
+            </div>
+            <div class="card-metrics" aria-label="Project metrics">
+              <div class="metric">
+                <span class="metric-value">95%</span>
+                <span class="metric-label">Registration success</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">+70pp</span>
+                <span class="metric-label">Completion lift</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">1M+</span>
+                <span class="metric-label">Users impacted</span>
+              </div>
+            </div>
+            <button class="card-cta" aria-label="View full case study: NOS ID Authentication Redesign">
+              View Case Study
+              <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M1 13L13 1M13 1H5M13 1v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="card-image" aria-label="Project image placeholder">
+            <div class="card-image-placeholder">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Image Placeholder</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="case-card reveal reveal-delay-1" role="article" onclick="openCaseStudy('nosnet')" tabindex="0" aria-label="Open case study: NOS Net App Experience">
+          <div class="card-image" aria-label="Project image placeholder">
+            <div class="card-image-placeholder">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Image Placeholder</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-logo" aria-label="NOS logo placeholder">NOS</div>
+            <p class="card-tagline">NOS Net — App Experience Redesign</p>
+            <p class="card-desc">Transformed a 1.3-star engineering tool into a top-rated consumer app by designing around real user needs, plain language, and confidence-building flows.</p>
+            <div class="card-metrics" aria-label="Project metrics">
+              <div class="metric">
+                <span class="metric-value">4.7★</span>
+                <span class="metric-label">App store rating</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">#1</span>
+                <span class="metric-label">NOS portfolio</span>
+              </div>
+            </div>
+            <button class="card-cta" aria-label="View full case study: NOS Net App Experience">
+              View Case Study
+              <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M1 13L13 1M13 1H5M13 1v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="case-card reveal reveal-delay-2" role="article" onclick="openCaseStudy('carbon')" tabindex="0" aria-label="Open case study: CARBON Unified BackOffice">
+          <div class="card-image" aria-label="Project image placeholder">
+            <div class="card-image-placeholder">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Image Placeholder</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-logo" aria-label="NOS Inovação logo placeholder">NOSi</div>
+            <p class="card-tagline">CARBON — Unified BackOffice Platform</p>
+            <p class="card-desc">Sole designer unifying 12+ disconnected internal tools into one platform — replacing Excel workflows and multi-tool processes with purpose-built experiences.</p>
+            <div class="card-metrics" aria-label="Project metrics">
+              <div class="metric">
+                <span class="metric-value">12+</span>
+                <span class="metric-label">BackOffices unified</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">2×</span>
+                <span class="metric-label">Faster workflows</span>
+              </div>
+            </div>
+            <button class="card-cta" aria-label="View full case study: CARBON Unified BackOffice">
+              View Case Study
+              <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M1 13L13 1M13 1H5M13 1v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="section-label">About Me</p>
+          <h2 id="about-heading" class="section-title">Designing with intention for 6+ years</h2>
+          <p>I'm João Alexandre, a Senior Product Designer from Portugal with 6+ years turning complex problems into clear, human experiences. I take a holistic approach — with a foundation in HTML, CSS, and JavaScript that helps me bridge design and development.</p>
+          <p>Sharp eye for detail, love for turning fresh ideas into lively realities.</p>
+          <div class="about-meta" aria-label="Personal details">
+            <div class="about-meta-row"><span>Location</span><span>Portugal</span></div>
+            <div class="about-meta-row"><span>Education</span><span>BSc Business Information Technology, Solent University</span></div>
+            <div class="about-meta-row"><span>Languages</span><span>Portuguese · English</span></div>
+            <div class="about-meta-row"><span>Availability</span><span>Open to opportunities</span></div>
+          </div>
+        </div>
+
+        <div class="about-images reveal reveal-delay-2" aria-label="Personal photos placeholder">
+          <div class="about-img" aria-label="Photo placeholder 1">
+            <div class="about-img-placeholder">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <circle cx="16" cy="10" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 28c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>Photo</span>
+            </div>
+          </div>
+          <div class="about-img" aria-label="Photo placeholder 2">
+            <div class="about-img-placeholder">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="26" height="26" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="11" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M3 22l6-5 5 4 5-6 10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>Photo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="skills-header reveal">
+        <p class="section-label">Expertise</p>
+        <h2 id="skills-heading" class="section-title">A well-rounded set of design skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal reveal-delay-1">
+          <p class="skill-category-title">UX Design</p>
+          <ul class="skill-list" aria-label="UX design skills">
+            <li>UX Thinking</li>
+            <li>User Research</li>
+            <li>Usability Testing</li>
+            <li>Information Architecture</li>
+            <li>Prototyping</li>
+            <li>Data Analysis</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <p class="skill-category-title">UI Design</p>
+          <ul class="skill-list" aria-label="UI design skills">
+            <li>Web, Mobile &amp; TV UI</li>
+            <li>Design Systems</li>
+            <li>Motion Graphics</li>
+            <li>Accessibility (a11y)</li>
+            <li>Responsive &amp; Adaptive UI</li>
+            <li>Component Design</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <p class="skill-category-title">Development</p>
+          <ul class="skill-list" aria-label="Development skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Design–Dev Handoff</li>
+            <li>Flutter Collaboration</li>
+            <li>Design Tokens</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <p class="skill-category-title">Tools</p>
+          <ul class="skill-list" aria-label="Design tools">
+            <li>Figma</li>
+            <li>Protopie</li>
+            <li>Maze</li>
+            <li>After Effects</li>
+            <li>Jira / Linear</li>
+            <li>Notion</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <p class="skill-category-title">Research</p>
+          <ul class="skill-list" aria-label="Research skills">
+            <li>Shadow Research</li>
+            <li>Stakeholder Interviews</li>
+            <li>Usability Testing</li>
+            <li>Analytics Review</li>
+            <li>Heuristic Evaluation</li>
+            <li>Screen Reader Testing</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <p class="skill-category-title">Strategy</p>
+          <ul class="skill-list" aria-label="Strategy skills">
+            <li>Cross-functional Collaboration</li>
+            <li>Stakeholder Management</li>
+            <li>B2B &amp; B2C Product Design</li>
+            <li>Design System Architecture</li>
+            <li>Security UX</li>
+            <li>Accessibility Leadership</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <p class="section-label">Let's Work Together</p>
+        <h2 id="contact-heading" class="contact-tagline">
+          Got a project? <em>Let's make it great.</em>
+        </h2>
+        <a href="mailto:j.alexandre.sousa.ux@gmail.com" class="contact-email" aria-label="Send an email to j.alexandre.sousa.ux@gmail.com">
+          j.alexandre.sousa.ux@gmail.com
+        </a>
+        <div class="contact-actions">
+          <a
+            href="https://linkedin.com/in/jalexmps"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--inverse"
+            role="link"
+            aria-label="Open LinkedIn profile in a new tab"
+          >
+            <span>LinkedIn Profile ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2025 João Alexandre Sousa. All rights reserved.</span>
+        <span>Designed with intention.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── CASE STUDY OVERLAY ─── -->
+  <div id="cs-overlay" class="cs-overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title" aria-hidden="true">
+    <nav class="overlay-nav" aria-label="Case study navigation">
+      <button class="overlay-back" onclick="closeCaseStudy()" aria-label="Back to portfolio">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M10 13L5 8l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Work
+      </button>
+      <span style="font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--col-ink-muted)" id="overlay-label">Case Study</span>
+    </nav>
+
+    <div class="overlay-content">
+
+      <div class="overlay-hero-image" aria-label="Case study hero image placeholder">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span style="font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;margin-left:12px;opacity:0.5">Hero Image Placeholder</span>
+      </div>
+
+      <div id="overlay-tags" class="overlay-tags" aria-label="Project tags"></div>
+
+      <h1 id="overlay-title" class="overlay-title"></h1>
+      <p id="overlay-subtitle" class="overlay-subtitle"></p>
+
+      <div class="overlay-meta">
+        <div class="overlay-meta-item">
+          <h4>Role</h4>
+          <p id="overlay-role"></p>
+        </div>
+        <div class="overlay-meta-item">
+          <h4>Timeline</h4>
+          <p id="overlay-timeline"></p>
+        </div>
+        <div class="overlay-meta-item">
+          <h4>Team</h4>
+          <p id="overlay-team"></p>
+        </div>
+      </div>
+
+      <div id="overlay-metrics" class="overlay-metrics-row" aria-label="Project outcomes"></div>
+
+      <div class="overlay-body">
+        <aside class="overlay-sidebar">
+          <h3>The Challenge</h3>
+          <p id="overlay-challenge" class="overlay-sidebar-text"></p>
+          <h3 class="overlay-sidebar-h3">My Approach</h3>
+          <p id="overlay-approach" class="overlay-sidebar-text"></p>
+        </aside>
+
+        <div class="overlay-main">
+          <div id="overlay-body-text"></div>
+
+          <div class="overlay-image-block" aria-label="Case study image placeholder">
+            <span style="font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.5">Image Placeholder</span>
+          </div>
+
+          <div class="overlay-image-block" aria-label="Case study image placeholder">
+            <span style="font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.5">Image Placeholder</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/reveal.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/case-studies.js"></script>
+
+</body>
+</html>
