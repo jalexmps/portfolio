@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOS ID — Authentication Redesign · João Alexandre Sousa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/project.css" />
+</head>
+<body class="project-page">
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav class="project-nav" aria-label="Case study navigation">
+    <a href="index.html#case-studies" class="project-nav__back" aria-label="Back to portfolio">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M10 13L5 8l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Work
+    </a>
+    <span class="project-nav__label">NOS ID · Authentication</span>
+    <div></div>
+  </nav>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="proj-hero" aria-labelledby="proj-title">
+      <div class="container">
+        <div class="proj-tags" aria-label="Project tags">
+          <span class="proj-tag">UX Redesign</span>
+          <span class="proj-tag">Authentication</span>
+          <span class="proj-tag">Product Design</span>
+        </div>
+
+        <h1 id="proj-title" class="proj-title">NOS ID — Authentication Redesign</h1>
+        <p class="proj-subtitle">Redesigning authentication for 1M+ users across the NOS ecosystem — turning a broken, trust-eroding flow into a seamless passwordless experience.</p>
+
+        <!-- Before → After transform -->
+        <div class="hero-impact" aria-label="Impact: registration success rate went from 25% to 95%">
+          <div class="hero-impact__before">
+            <span class="impact-value impact-value--before">25%</span>
+            <span class="impact-label">Before</span>
+          </div>
+          <div class="hero-impact__arrow" aria-hidden="true">
+            <svg width="56" height="16" viewBox="0 0 56 16" fill="none">
+              <path d="M0 8h50M42 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Registration success</span>
+          </div>
+          <div class="hero-impact__after">
+            <span class="impact-value impact-value--after js-counter" data-target="95" aria-label="95%">0%</span>
+            <span class="impact-label">After</span>
+          </div>
+        </div>
+
+        <!-- Meta row -->
+        <div class="proj-meta" aria-label="Project details">
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Role</span>
+            <span class="proj-meta__val">Lead Product Designer</span>
+          </div>
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Timeline</span>
+            <span class="proj-meta__val">2019 – Ongoing</span>
+          </div>
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Team</span>
+            <span class="proj-meta__val">Designer · PM · Engineering · Security</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero image -->
+      <div class="container">
+        <div class="proj-hero-img" aria-label="Project hero image placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Hero Image Placeholder</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OVERVIEW ─── -->
+    <section class="proj-section" aria-labelledby="sec-overview">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Context</p>
+          <h2 id="sec-overview" class="proj-section__title">The product at the centre of it all</h2>
+        </div>
+        <div class="proj-overview">
+          <p class="proj-overview__text reveal">
+            NOS ID is the single sign-on platform connecting all NOS digital products — apps, account management, and TV services. It acts as the entry point for over <strong>1 million users</strong>. Every NOS customer who creates an account, resets a password, or logs in to a digital service touches this system. When it fails, every downstream product fails with it.
+          </p>
+          <div class="proj-ecosystem reveal reveal-delay-1" aria-label="NOS ID ecosystem diagram">
+            <div class="ecosystem-hub" aria-label="NOS ID — central SSO platform">NOS ID</div>
+            <p class="ecosystem-label">Single sign-on for</p>
+            <div class="ecosystem-spokes" aria-label="Connected products">
+              <span>NOS App</span>
+              <span>NOS Net</span>
+              <span>TV Services</span>
+              <span>My NOS</span>
+              <span>Support Portal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE PROBLEM ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-problem">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">The Problem</p>
+          <h2 id="sec-problem" class="proj-section__title">Only 1 in 4 users made it through</h2>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-narrative reveal">
+            <p>The existing NOS ID registration flow was failing users at every turn. Only 25% of users who started the signup process actually completed it — meaning NOS was losing three quarters of potential customers before they ever touched a product.</p>
+            <p>The experience felt confusing, unpredictable, and at times untrustworthy. Users weren't sure what step they were on, why they were being asked for information, or whether their data was safe. For a telecom's primary digital identity product, this was a critical failure.</p>
+            <blockquote class="problem-quote">
+              "Users didn't trust the process — and abandoned it."
+            </blockquote>
+          </div>
+          <div class="problem-evidence reveal reveal-delay-1">
+            <p class="evidence-title">What the data showed</p>
+            <ul class="evidence-list" aria-label="Evidence of the problem">
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Drop-offs across multiple steps, not just one</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>High friction in the phone verification step</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Poor error handling — no recovery paths</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>No sense of progress through the flow</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Trust signals absent throughout</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── MY ROLE ─── -->
+    <section class="proj-section" aria-labelledby="sec-role">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">My Role</p>
+          <h2 id="sec-role" class="proj-section__title">End-to-end ownership</h2>
+        </div>
+        <div class="role-layout reveal">
+          <p class="role-statement">Lead Product Designer with full end-to-end ownership — from initial research and problem framing through to production-ready specifications. Working in close collaboration with product management, engineering, and the security team throughout.</p>
+          <div class="role-chips" aria-label="Skills applied on this project">
+            <span class="chip">UX Strategy</span>
+            <span class="chip">Interaction Design</span>
+            <span class="chip">Usability Testing</span>
+            <span class="chip">UI Design</span>
+            <span class="chip">Security UX</span>
+            <span class="chip">Cross-functional Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROCESS ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-process">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Process</p>
+          <h2 id="sec-process" class="proj-section__title">How I approached the problem</h2>
+        </div>
+        <div class="process-steps" role="list" aria-label="Design process steps">
+          <div class="process-step reveal" role="listitem">
+            <span class="process-step__num" aria-hidden="true">01</span>
+            <h3 class="process-step__title">Analytics Deep Dive</h3>
+            <p class="process-step__desc">Mapped every drop-off point in the funnel to understand precisely where and why users were abandoning.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-1" role="listitem">
+            <span class="process-step__num" aria-hidden="true">02</span>
+            <h3 class="process-step__title">User Research</h3>
+            <p class="process-step__desc">Qualitative sessions to surface the emotional responses — confusion, distrust, frustration — behind the numbers.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-2" role="listitem">
+            <span class="process-step__num" aria-hidden="true">03</span>
+            <h3 class="process-step__title">Problem Mapping</h3>
+            <p class="process-step__desc">Synthesised findings into a clear problem map addressing root causes, not just symptoms on the surface.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3" role="listitem">
+            <span class="process-step__num" aria-hidden="true">04</span>
+            <h3 class="process-step__title">Iteration & Testing</h3>
+            <p class="process-step__desc">Multiple rounds of prototyping and usability testing, with security review embedded throughout the process.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3" role="listitem">
+            <span class="process-step__num" aria-hidden="true">05</span>
+            <h3 class="process-step__title">Final Design</h3>
+            <p class="process-step__desc">Production-ready specifications for mobile and desktop, with a complete component system for auth patterns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── KEY INSIGHTS ─── -->
+    <section class="proj-section" aria-labelledby="sec-insights">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Key Insights</p>
+          <h2 id="sec-insights" class="proj-section__title">What research revealed</h2>
+        </div>
+        <div class="insights-grid">
+          <div class="insight-card reveal">
+            <span class="insight-num">01</span>
+            <h3 class="insight-title">Clarity was missing</h3>
+            <p class="insight-desc">Users didn't know what to do next. Each step raised questions rather than answering them — next actions were ambiguous and context was absent at every turn.</p>
+          </div>
+          <div class="insight-card reveal reveal-delay-1">
+            <span class="insight-num">02</span>
+            <h3 class="insight-title">Trust was fragile</h3>
+            <p class="insight-desc">The flow felt unsafe or suspicious. Generic error states, inconsistent branding, and missing trust signals made users question whether they were on a legitimate NOS page.</p>
+          </div>
+          <div class="insight-card reveal reveal-delay-2">
+            <span class="insight-num">03</span>
+            <h3 class="insight-title">Complexity was front-loaded</h3>
+            <p class="insight-desc">Too much was asked too early. Users were confronted with dense forms and complex choices before they'd built any confidence in the experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DESIGN PRINCIPLES ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-principles">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Design Principles</p>
+          <h2 id="sec-principles" class="proj-section__title">Three principles. Every decision.</h2>
+        </div>
+        <div class="principles-grid">
+          <div class="principle reveal">
+            <span class="principle__num" aria-hidden="true">I</span>
+            <h3 class="principle__title">Clarity at every step</h3>
+            <p class="principle__desc">Every screen answers one question: what do I do now? Instructions are explicit, progress is always visible, and nothing is left to assumption. If a user has to think, we've already failed.</p>
+          </div>
+          <div class="principle reveal reveal-delay-1">
+            <span class="principle__num" aria-hidden="true">II</span>
+            <h3 class="principle__title">Build trust continuously</h3>
+            <p class="principle__desc">Trust isn't a single screen — it's a thread running through the entire experience. NOS branding, security cues, reassuring copy, and predictable behaviour present from the very first interaction.</p>
+          </div>
+          <div class="principle reveal reveal-delay-2">
+            <span class="principle__num" aria-hidden="true">III</span>
+            <h3 class="principle__title">Progressive disclosure</h3>
+            <p class="principle__desc">Complexity is earned, not imposed. Start with the minimum needed. Reveal detail only when the user is ready for it — reducing cognitive load at every stage of the journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE SOLUTION ─── -->
+    <section class="proj-section" aria-labelledby="sec-solution">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">The Solution</p>
+          <h2 id="sec-solution" class="proj-section__title">A complete authentication system</h2>
+        </div>
+        <p class="proj-section__intro reveal">Three authentication paths — each designed for a different user need, all built on the same clarity-first principles.</p>
+        <div class="auth-methods" aria-label="Authentication methods">
+          <div class="auth-method auth-method--primary reveal">
+            <div class="auth-method__badge">Primary</div>
+            <h3 class="auth-method__title">Passwordless</h3>
+            <p class="auth-method__desc">One-time code delivered to email or phone. No password to remember, reduced attack surface, and the lowest friction entry point for new users.</p>
+            <div class="auth-method__detail">Email · SMS code</div>
+          </div>
+          <div class="auth-method reveal reveal-delay-1">
+            <div class="auth-method__badge">Secondary</div>
+            <h3 class="auth-method__title">Password</h3>
+            <p class="auth-method__desc">Traditional email and password login, retained for users who prefer or require it. The same clarity-first interaction patterns applied throughout the full flow.</p>
+            <div class="auth-method__detail">Email + password</div>
+          </div>
+          <div class="auth-method reveal reveal-delay-2">
+            <div class="auth-method__badge">Social</div>
+            <h3 class="auth-method__title">Social Login</h3>
+            <p class="auth-method__desc">One-tap authentication through trusted third-party accounts — the fastest entry point for users already signed into supported platforms.</p>
+            <div class="auth-method__detail">Apple · Google · Facebook</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SIGNUP FLOW DEEP DIVE ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-flow">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Deep Dive</p>
+          <h2 id="sec-flow" class="proj-section__title">The signup flow</h2>
+        </div>
+        <p class="proj-section__intro reveal">Registration redesigned as five clear, purposeful steps — each one earning the right to ask for the next piece of information.</p>
+
+        <div class="signup-flow" role="list" aria-label="Signup flow steps">
+          <div class="flow-step reveal" role="listitem">
+            <div class="flow-step__num" aria-hidden="true">1</div>
+            <div class="flow-step__content">
+              <h3>Create Account</h3>
+              <p>Name and email only — no unnecessary fields upfront.</p>
+            </div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-step reveal reveal-delay-1" role="listitem">
+            <div class="flow-step__num" aria-hidden="true">2</div>
+            <div class="flow-step__content">
+              <h3>Validate Phone</h3>
+              <p>With clear rationale — users understand exactly why.</p>
+            </div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-step reveal reveal-delay-2" role="listitem">
+            <div class="flow-step__num" aria-hidden="true">3</div>
+            <div class="flow-step__content">
+              <h3>Enter SMS Code</h3>
+              <p>Auto-focused input with countdown and resend option.</p>
+            </div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-step reveal reveal-delay-3" role="listitem">
+            <div class="flow-step__num" aria-hidden="true">4</div>
+            <div class="flow-step__content">
+              <h3>Set Password</h3>
+              <p>Optional for passwordless users. Inline strength guidance.</p>
+            </div>
+          </div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-step reveal reveal-delay-3" role="listitem">
+            <div class="flow-step__num" aria-hidden="true">5</div>
+            <div class="flow-step__content">
+              <h3>Success</h3>
+              <p>Confirmation with immediate routing to the originating product.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-screens" aria-label="Screen examples">
+          <div class="flow-screen-placeholder" aria-label="Signup screen placeholder">
+            <span>Screen Placeholder</span>
+          </div>
+          <div class="flow-screen-placeholder" aria-label="Verification screen placeholder">
+            <span>Screen Placeholder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECURITY UX ─── -->
+    <section class="proj-section proj-section--security" aria-labelledby="sec-security">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Security UX</p>
+          <h2 id="sec-security" class="proj-section__title">Security without sacrificing usability</h2>
+        </div>
+        <p class="security-lead reveal">Deliberate anti-enumeration UX patterns were designed in close collaboration with the security team — preventing account discovery attacks while keeping the experience clear and trustworthy for legitimate users.</p>
+        <div class="security-detail">
+          <div class="security-point reveal">
+            <h3>The Vulnerability</h3>
+            <p>Traditional auth flows leak information. "This email isn't registered" or "Incorrect password" tells attackers exactly which accounts exist — and which don't. A simple probe can map an entire user base.</p>
+          </div>
+          <div class="security-point reveal reveal-delay-1">
+            <h3>The Design Decision</h3>
+            <p>Responses for valid and invalid email addresses are intentionally identical — the same flow, the same language, the same timing. No difference to probe or exploit. Security enforced through design, not just code.</p>
+          </div>
+          <div class="security-point reveal reveal-delay-2">
+            <h3>The Balance</h3>
+            <p>Registered users flow through naturally. Unregistered users are guided to create an account without ever knowing they triggered a security mechanism. Both paths feel equally smooth and deliberate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CROSS-PLATFORM ─── -->
+    <section class="proj-section" aria-labelledby="sec-platform">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Cross-Platform</p>
+          <h2 id="sec-platform" class="proj-section__title">One experience. Every surface.</h2>
+        </div>
+        <div class="platform-grid">
+          <div class="platform-item reveal">
+            <div class="platform-item__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <rect x="6" y="1" width="14" height="22" rx="2.5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="13" cy="20" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Mobile First</h3>
+            <p>Designed primarily for mobile — the dominant device for NOS ID registrations. Touch targets, keyboard behaviour, and input types all optimised for the mobile context first.</p>
+          </div>
+          <div class="platform-item reveal reveal-delay-1">
+            <div class="platform-item__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <rect x="2" y="4" width="22" height="15" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M9 24h8M13 19v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Desktop Adaptation</h3>
+            <p>Adapted for 1360×768 desktop with a wider layout that maintains full visual and interaction consistency. Not a separate experience — just a wider canvas for the same journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OUTCOMES ─── -->
+    <section class="proj-section proj-outcomes" aria-labelledby="sec-outcomes">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Outcomes</p>
+          <h2 id="sec-outcomes" class="proj-section__title">The numbers tell the story</h2>
+        </div>
+        <div class="outcomes-grid">
+          <div class="outcome reveal">
+            <span class="outcome__value">95%</span>
+            <span class="outcome__label">Registration success rate</span>
+          </div>
+          <div class="outcome reveal reveal-delay-1">
+            <span class="outcome__value">+70pp</span>
+            <span class="outcome__label">Absolute improvement</span>
+          </div>
+          <div class="outcome reveal reveal-delay-2">
+            <span class="outcome__value">1M+</span>
+            <span class="outcome__label">Users impacted</span>
+          </div>
+          <div class="outcome reveal reveal-delay-3">
+            <span class="outcome__value">3</span>
+            <span class="outcome__label">Auth methods launched</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── REFLECTION ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-reflection">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Reflection</p>
+          <h2 id="sec-reflection" class="proj-section__title">What this project taught me</h2>
+        </div>
+        <div class="reflection-grid">
+          <div class="reflection-item reveal">
+            <h3>Security and UX aren't opposites</h3>
+            <p>Working closely with the security team showed me that the best security UX is invisible. The constraints of anti-enumeration design actually pushed the experience toward greater clarity — the result was simultaneously more secure and more usable.</p>
+          </div>
+          <div class="reflection-item reveal reveal-delay-1">
+            <h3>Small clarity improvements compound into massive impact</h3>
+            <p>Moving from 25% to 95% didn't require a single dramatic change. It was dozens of small improvements — clearer labels, visible progress, gentler error states — that compounded into a 70-point jump in completion rate.</p>
+          </div>
+          <div class="reflection-item reveal reveal-delay-2">
+            <h3>Trust is as important as usability</h3>
+            <p>A usable flow that doesn't feel trustworthy will still be abandoned. Authentication is one of the few moments where users are actively assessing whether they're being deceived — designing for trust was every bit as critical as designing for ease.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="project-footer" role="contentinfo">
+    <div class="container">
+      <div class="project-footer__inner">
+        <a href="index.html#case-studies" class="btn btn--inverse" aria-label="Back to portfolio">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back to Work</span>
+        </a>
+        <span class="project-footer__copy">© 2025 João Alexandre Sousa. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+  <script src="js/project.js"></script>
+
+</body>
+</html>
