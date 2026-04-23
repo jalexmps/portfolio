@@ -76,7 +76,7 @@
           </div>
           <div class="proj-meta__item">
             <span class="proj-meta__key">Team</span>
-            <span class="proj-meta__val">Designer · PM · Engineering · Security</span>
+            <span class="proj-meta__val">Designer · Product Owner · Security</span>
           </div>
         </div>
       </div>
@@ -109,11 +109,10 @@
             <div class="ecosystem-hub" aria-label="NOS ID — central SSO platform">NOS ID</div>
             <p class="ecosystem-label">Single sign-on for</p>
             <div class="ecosystem-spokes" aria-label="Connected products">
-              <span>NOS App</span>
+              <span>MyNOS</span>
               <span>NOS Net</span>
-              <span>TV Services</span>
-              <span>My NOS</span>
-              <span>Support Portal</span>
+              <span>NOS TV</span>
+              <span>WTF</span>
             </div>
           </div>
         </div>
@@ -132,7 +131,7 @@
             <p>The existing NOS ID registration flow was failing users at every turn. Only 25% of users who started the signup process actually completed it — meaning NOS was losing three quarters of potential customers before they ever touched a product.</p>
             <p>The experience felt confusing, unpredictable, and at times untrustworthy. Users weren't sure what step they were on, why they were being asked for information, or whether their data was safe. For a telecom's primary digital identity product, this was a critical failure.</p>
             <blockquote class="problem-quote">
-              "Users didn't trust the process — and abandoned it."
+              "Users got lost in the process — and abandoned it."
             </blockquote>
           </div>
           <div class="problem-evidence reveal reveal-delay-1">
@@ -144,11 +143,15 @@
               </li>
               <li>
                 <span class="evidence-icon" aria-hidden="true">↓</span>
-                <span>High friction in the phone verification step</span>
+                <span>Both email <em>and</em> phone validation required on the same page — compounding friction</span>
               </li>
               <li>
                 <span class="evidence-icon" aria-hidden="true">↓</span>
-                <span>Poor error handling — no recovery paths</span>
+                <span>App crashed when users navigated away to their email client mid-flow</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Poor error handling — no recovery paths for failed validation</span>
               </li>
               <li>
                 <span class="evidence-icon" aria-hidden="true">↓</span>
@@ -316,6 +319,11 @@
         </div>
         <p class="proj-section__intro reveal">Registration redesigned as five clear, purposeful steps — each one earning the right to ask for the next piece of information.</p>
 
+        <div class="flow-decision reveal" role="note" aria-label="Design decision callout">
+          <span class="flow-decision__label">Design decision</span>
+          <p>The original flow required users to validate both their email address <em>and</em> phone number before completing signup. Analytics showed this was a primary drop-off point — and a technical crash when users left the app to open their email client compounded the problem. The new flow removes email validation from the critical path entirely: users go start to finish using SMS only. Email can be verified later, at a lower-stakes moment.</p>
+        </div>
+
         <div class="signup-flow" role="list" aria-label="Signup flow steps">
           <div class="flow-step reveal" role="listitem">
             <div class="flow-step__num" aria-hidden="true">1</div>
@@ -329,7 +337,7 @@
             <div class="flow-step__num" aria-hidden="true">2</div>
             <div class="flow-step__content">
               <h3>Validate Phone</h3>
-              <p>With clear rationale — users understand exactly why.</p>
+              <p>With clear rationale — users understand exactly why this step matters.</p>
             </div>
           </div>
           <div class="flow-connector" aria-hidden="true"></div>
@@ -337,7 +345,7 @@
             <div class="flow-step__num" aria-hidden="true">3</div>
             <div class="flow-step__content">
               <h3>Enter SMS Code</h3>
-              <p>Auto-focused input with countdown and resend option.</p>
+              <p>Auto-focused input with countdown and resend option. No app-switching required.</p>
             </div>
           </div>
           <div class="flow-connector" aria-hidden="true"></div>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOS NET — Router App Redesign · João Alexandre Sousa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/project.css" />
+</head>
+<body class="project-page">
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav class="project-nav" aria-label="Case study navigation">
+    <a href="index.html#case-studies" class="project-nav__back" aria-label="Back to portfolio">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M10 13L5 8l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Work
+    </a>
+    <span class="project-nav__label">NOS NET · Router App</span>
+    <div></div>
+  </nav>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="proj-hero" aria-labelledby="proj-title">
+      <div class="container">
+        <div class="proj-tags" aria-label="Project tags">
+          <span class="proj-tag">UX Redesign</span>
+          <span class="proj-tag">Mobile App</span>
+          <span class="proj-tag">Product Design</span>
+          <span class="proj-tag">Flutter</span>
+        </div>
+
+        <h1 id="proj-title" class="proj-title">NOS NET — Router App Redesign</h1>
+        <p class="proj-subtitle">Transforming a technical router tool into a user-friendly self-service experience — taking the app from 1.3 to 4.7 on the App Store and making it the #1 rated app in the NOS portfolio.</p>
+
+        <!-- Before → After transform -->
+        <div class="hero-impact" aria-label="Impact: App Store rating went from 1.3 to 4.7">
+          <div class="hero-impact__before">
+            <span class="impact-value impact-value--before">1.3</span>
+            <span class="impact-label">Before</span>
+          </div>
+          <div class="hero-impact__arrow" aria-hidden="true">
+            <svg width="56" height="16" viewBox="0 0 56 16" fill="none">
+              <path d="M0 8h50M42 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>App Store rating</span>
+          </div>
+          <div class="hero-impact__after">
+            <span class="impact-value impact-value--after js-counter" data-target="4.7" data-decimal="1" data-suffix="" aria-label="4.7">0.0</span>
+            <span class="impact-label">After</span>
+          </div>
+        </div>
+
+        <!-- Meta row -->
+        <div class="proj-meta" aria-label="Project details">
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Role</span>
+            <span class="proj-meta__val">Lead Product Designer</span>
+          </div>
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Platform</span>
+            <span class="proj-meta__val">iOS · Android · Web</span>
+          </div>
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Codebase</span>
+            <span class="proj-meta__val">Single Flutter codebase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero image -->
+      <div class="container">
+        <div class="proj-hero-img" aria-label="Project hero image placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Hero Image Placeholder</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OVERVIEW ─── -->
+    <section class="proj-section" aria-labelledby="sec-overview">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Context</p>
+          <h2 id="sec-overview" class="proj-section__title">A critical tool with a critical rating</h2>
+        </div>
+        <div class="proj-overview">
+          <p class="proj-overview__text reveal">
+            NOS NET is the router management app that lets customers control their home network — Wi-Fi settings, parental controls, and advanced configurations. Despite being a daily utility for hundreds of thousands of NOS customers, it had <strong>one of the lowest ratings across the entire NOS app ecosystem</strong>. Users weren't just frustrated — they were calling support instead of opening the app.
+          </p>
+          <div class="proj-ecosystem reveal reveal-delay-1" aria-label="NOS NET capabilities">
+            <div class="ecosystem-hub" aria-label="NOS NET — home network control">NOS NET</div>
+            <p class="ecosystem-label">Home network control for</p>
+            <div class="ecosystem-spokes" aria-label="App features">
+              <span>Wi-Fi Settings</span>
+              <span>Parental Controls</span>
+              <span>Port Forwarding</span>
+              <span>DNS &amp; DMZ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE PROBLEM ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-problem">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">The Problem</p>
+          <h2 id="sec-problem" class="proj-section__title">Designed for experts. Used by everyone.</h2>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-narrative reveal">
+            <p>The app was built from the perspective of a network engineer, not a typical home user. Technical jargon — DNS, DMZ, port forwarding — dominated the top-level navigation, leaving everyday customers overwhelmed before they'd even started.</p>
+            <p>The homepage presented every feature at once with no hierarchy or guidance. Users feared that tapping the wrong setting might break their internet connection — so instead of engaging with the app, they called support.</p>
+            <blockquote class="problem-quote">
+              "Users avoided the app — or called support instead."
+            </blockquote>
+          </div>
+          <div class="problem-evidence reveal reveal-delay-1">
+            <p class="evidence-title">Key pain points</p>
+            <ul class="evidence-list" aria-label="Problems with the existing app">
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Technical jargon (DNS, DMZ, port forwarding) surfaced at top level</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Overwhelming homepage with no clear hierarchy or priority</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>No guidance or error recovery — users were left to figure it out alone</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Users feared breaking their internet connection</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Support calls used as a substitute for self-service</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── HIDDEN CHALLENGE ─── -->
+    <section class="proj-section proj-section--challenge" aria-labelledby="sec-challenge">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Hidden Challenge</p>
+          <h2 id="sec-challenge" class="proj-section__title">The real obstacle was internal</h2>
+        </div>
+        <p class="challenge-lead reveal">Beyond the UX problems visible in the ratings, there was a deeper challenge: internal resistance. The engineering team held a widely shared belief that the problem wasn't the app — it was the users.</p>
+        <div class="challenge-detail">
+          <div class="challenge-point reveal">
+            <h3>The Belief</h3>
+            <p>"The problem isn't the app — it's the users." This assumption was deeply embedded and blocked progress at every turn. If users were the problem, there was nothing to fix.</p>
+          </div>
+          <div class="challenge-point reveal reveal-delay-1">
+            <h3>The Barrier</h3>
+            <p>Without team alignment, even a well-designed solution would face resistance at every stage — from prioritisation to implementation to release. The design work alone wasn't enough.</p>
+          </div>
+          <div class="challenge-point reveal reveal-delay-2">
+            <h3>My Approach</h3>
+            <p>I used research — not opinion — to challenge the assumption. Data and direct user testimony made the real problem undeniable, and shifted the team's energy toward solving it together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── MY ROLE ─── -->
+    <section class="proj-section" aria-labelledby="sec-role">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">My Role</p>
+          <h2 id="sec-role" class="proj-section__title">End-to-end ownership</h2>
+        </div>
+        <div class="role-layout reveal">
+          <p class="role-statement">Lead Product Designer with full end-to-end ownership — from initial research and stakeholder alignment through to production-ready design specifications. Responsible for both the quality of the work and the team's ability to act on it.</p>
+          <div class="role-chips" aria-label="Skills applied on this project">
+            <span class="chip">UX Research</span>
+            <span class="chip">UX/UI Design</span>
+            <span class="chip">Usability Testing</span>
+            <span class="chip">Stakeholder Alignment</span>
+            <span class="chip">UX Writing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROCESS ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-process">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Process</p>
+          <h2 id="sec-process" class="proj-section__title">How I approached the problem</h2>
+        </div>
+        <div class="process-steps" role="list" aria-label="Design process steps">
+          <div class="process-step reveal" role="listitem">
+            <span class="process-step__num" aria-hidden="true">01</span>
+            <h3 class="process-step__title">Analytics Review</h3>
+            <p class="process-step__desc">Mapped usage patterns and drop-off points to understand what users were actually trying to do — and where they were getting stuck.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-1" role="listitem">
+            <span class="process-step__num" aria-hidden="true">02</span>
+            <h3 class="process-step__title">User Research</h3>
+            <p class="process-step__desc">Qualitative sessions to surface the emotional reality behind the numbers — fear, confusion, avoidance — and build an undeniable case for change.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-2" role="listitem">
+            <span class="process-step__num" aria-hidden="true">03</span>
+            <h3 class="process-step__title">Insight Definition</h3>
+            <p class="process-step__desc">Synthesised findings into clear, actionable insights that challenged existing assumptions and aligned the team around a shared understanding of the real problem.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3" role="listitem">
+            <span class="process-step__num" aria-hidden="true">04</span>
+            <h3 class="process-step__title">Design</h3>
+            <p class="process-step__desc">Translated strategy into a structured, approachable UI — plain language, clear task hierarchy, and guided troubleshooting throughout the experience.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3" role="listitem">
+            <span class="process-step__num" aria-hidden="true">05</span>
+            <h3 class="process-step__title">Iteration &amp; Testing</h3>
+            <p class="process-step__desc">Multiple rounds of usability testing to validate journeys, refine language, and ensure the experience held up in the hands of real users.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── KEY INSIGHTS ─── -->
+    <section class="proj-section" aria-labelledby="sec-insights">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Key Insights</p>
+          <h2 id="sec-insights" class="proj-section__title">What research revealed</h2>
+        </div>
+        <div class="insights-grid">
+          <div class="insight-card reveal">
+            <span class="insight-num">01</span>
+            <h3 class="insight-title">Users came with clear intent</h3>
+            <p class="insight-desc">Most users had one specific goal — change the Wi-Fi password or fix a connection issue. The app's structure buried these common tasks under layers of technical options they didn't understand and didn't need.</p>
+          </div>
+          <div class="insight-card reveal reveal-delay-1">
+            <span class="insight-num">02</span>
+            <h3 class="insight-title">Fear blocked engagement</h3>
+            <p class="insight-desc">Users worried about breaking their network. When the interface looked technical and unforgiving, they disengaged rather than risk making things worse. Reducing fear was as important as reducing friction.</p>
+          </div>
+          <div class="insight-card reveal reveal-delay-2">
+            <span class="insight-num">03</span>
+            <h3 class="insight-title">Advanced features had value — but the wrong entry point</h3>
+            <p class="insight-desc">Power users genuinely wanted access to DNS, DMZ, and port forwarding — but they were a minority. Surfacing these at the top level served the few while overwhelming the many.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DESIGN STRATEGY ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-strategy">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Design Strategy</p>
+          <h2 id="sec-strategy" class="proj-section__title">From control panel to guided self-service</h2>
+        </div>
+        <p class="proj-section__intro reveal">One core shift defined the redesign: move from a technical control panel designed for experts to a guided self-service tool designed for everyone.</p>
+        <div class="principles-grid principles-grid--4">
+          <div class="principle reveal">
+            <span class="principle__num" aria-hidden="true">I</span>
+            <h3 class="principle__title">Simplify language</h3>
+            <p class="principle__desc">Replace technical terminology with plain, human language. If a user needs to know what DNS is to use the app, the app has failed — not the user.</p>
+          </div>
+          <div class="principle reveal reveal-delay-1">
+            <span class="principle__num" aria-hidden="true">II</span>
+            <h3 class="principle__title">Prioritise common tasks</h3>
+            <p class="principle__desc">Surface what the majority of users actually need — Wi-Fi settings and connection troubleshooting — at the top level, immediately accessible without digging.</p>
+          </div>
+          <div class="principle reveal reveal-delay-2">
+            <span class="principle__num" aria-hidden="true">III</span>
+            <h3 class="principle__title">Hide complexity</h3>
+            <p class="principle__desc">Move advanced features behind an "Advanced" section. They remain accessible for power users — but stop dominating an interface built for everyone.</p>
+          </div>
+          <div class="principle reveal reveal-delay-3">
+            <span class="principle__num" aria-hidden="true">IV</span>
+            <h3 class="principle__title">Guide, don't expose</h3>
+            <p class="principle__desc">Replace passive feature exposure with active guidance. Troubleshooting flows, contextual hints, and confirmation patterns give users confidence at every step.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE SOLUTION ─── -->
+    <section class="proj-section" aria-labelledby="sec-solution">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">The Solution</p>
+          <h2 id="sec-solution" class="proj-section__title">Light, structured, approachable</h2>
+        </div>
+        <p class="proj-section__intro reveal">A complete redesign of the app — validated through usability testing and delivered across iOS, Android, and Web via a single Flutter codebase.</p>
+        <div class="solution-pillars" aria-label="Solution pillars">
+          <div class="solution-pillar reveal">
+            <div class="solution-pillar__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M4 8h20M4 14h14M4 20h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Plain language</h3>
+            <p>Every label, instruction, and error message rewritten in language a non-technical user can understand and act on without a second thought.</p>
+          </div>
+          <div class="solution-pillar reveal reveal-delay-1">
+            <div class="solution-pillar__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14 4L4 14l10 10 10-10L14 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M14 9v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Validated journeys</h3>
+            <p>Core user flows — changing Wi-Fi settings, troubleshooting connectivity — tested and refined until they required no prior network knowledge to complete.</p>
+          </div>
+          <div class="solution-pillar reveal reveal-delay-2">
+            <div class="solution-pillar__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M6 14h3l3-7 4 14 3-10 2 3h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Guided troubleshooting</h3>
+            <p>Step-by-step flows that walk users through common problems — reducing fear, reducing errors, and eliminating unnecessary support calls.</p>
+          </div>
+          <div class="solution-pillar reveal reveal-delay-3">
+            <div class="solution-pillar__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <rect x="4" y="2" width="9" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="15" y="8" width="9" height="18" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3>Cross-platform delivery</h3>
+            <p>App and Web shipped from a single Flutter codebase — a consistent experience across every platform with no divergence in logic or language.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OUTCOMES ─── -->
+    <section class="proj-section proj-outcomes" aria-labelledby="sec-outcomes">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Outcomes</p>
+          <h2 id="sec-outcomes" class="proj-section__title">The numbers tell the story</h2>
+        </div>
+        <div class="outcomes-grid">
+          <div class="outcome reveal">
+            <span class="outcome__value">4.7</span>
+            <span class="outcome__label">App Store rating</span>
+          </div>
+          <div class="outcome reveal reveal-delay-1">
+            <span class="outcome__value">#1</span>
+            <span class="outcome__label">Rated app in NOS portfolio</span>
+          </div>
+          <div class="outcome reveal reveal-delay-2">
+            <span class="outcome__value">↓</span>
+            <span class="outcome__label">Support calls reduced</span>
+          </div>
+          <div class="outcome reveal reveal-delay-3">
+            <span class="outcome__value">2×</span>
+            <span class="outcome__label">Platforms from one codebase</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── REFLECTION ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-reflection">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Reflection</p>
+          <h2 id="sec-reflection" class="proj-section__title">What this project taught me</h2>
+        </div>
+        <div class="reflection-grid">
+          <div class="reflection-item reveal">
+            <h3>Research can shift deeply held assumptions</h3>
+            <p>The biggest design challenge wasn't the UI — it was the team's belief that users were the problem. Data and direct user testimony changed the conversation and made alignment possible. Research isn't just about insights — it's a tool for organisational change.</p>
+          </div>
+          <div class="reflection-item reveal reveal-delay-1">
+            <h3>Simplicity builds confidence, not just usability</h3>
+            <p>Users didn't just find the redesigned app easier to use — they felt safer using it. Simplifying language and structure removed the fear of making a mistake. That emotional shift was as valuable as any usability improvement.</p>
+          </div>
+          <div class="reflection-item reveal reveal-delay-2">
+            <h3>Language is a core UX tool</h3>
+            <p>Renaming "DNS Settings" to "Connection Help" isn't cosmetic — it's the difference between a user engaging and a user walking away. The words we choose determine whether an interface feels approachable or hostile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="project-footer" role="contentinfo">
+    <div class="container">
+      <div class="project-footer__inner">
+        <a href="index.html#case-studies" class="btn btn--inverse" aria-label="Back to portfolio">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back to Work</span>
+        </a>
+        <span class="project-footer__copy">© 2025 João Alexandre Sousa. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+  <script src="js/project.js"></script>
+
+</body>
+</html>

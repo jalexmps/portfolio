@@ -11,15 +11,19 @@ if (progressBar) {
 
 // ─── HERO COUNTER ANIMATION ────────────────────────────────────────────────
 function animateCounter(el, target, duration) {
+  const decimals = parseInt(el.dataset.decimal || '0', 10);
+  const suffix = el.dataset.suffix !== undefined ? el.dataset.suffix : '%';
+  const multiplier = Math.pow(10, decimals);
   const start = performance.now();
   const update = (now) => {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 4);
-    el.textContent = Math.floor(eased * target) + '%';
+    const current = Math.floor(eased * target * multiplier) / multiplier;
+    el.textContent = current.toFixed(decimals) + suffix;
     if (progress < 1) {
       requestAnimationFrame(update);
     } else {
-      el.textContent = target + '%';
+      el.textContent = target.toFixed(decimals) + suffix;
     }
   };
   requestAnimationFrame(update);
@@ -27,7 +31,7 @@ function animateCounter(el, target, duration) {
 
 const counterEl = document.querySelector('.js-counter');
 if (counterEl) {
-  const target = parseInt(counterEl.dataset.target, 10);
+  const target = parseFloat(counterEl.dataset.target);
   const counterObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       animateCounter(counterEl, target, 1800);

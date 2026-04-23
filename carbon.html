@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CARBON — Unified BackOffice · João Alexandre Sousa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/project.css" />
+</head>
+<body class="project-page">
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav class="project-nav" aria-label="Case study navigation">
+    <a href="index.html#case-studies" class="project-nav__back" aria-label="Back to portfolio">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M10 13L5 8l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Work
+    </a>
+    <span class="project-nav__label">CARBON · Unified BackOffice</span>
+    <div></div>
+  </nav>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="proj-hero" aria-labelledby="proj-title">
+      <div class="container">
+        <div class="proj-tags" aria-label="Project tags">
+          <span class="proj-tag">Internal Tools</span>
+          <span class="proj-tag">Design System</span>
+          <span class="proj-tag">Product Design</span>
+        </div>
+
+        <h1 id="proj-title" class="proj-title">CARBON — Unified BackOffice Platform</h1>
+        <p class="proj-subtitle">Unifying 12+ fragmented internal tools into a single scalable platform — designed entirely solo across 20 concurrent development workstreams at NOS Inovação.</p>
+
+        <!-- Before → After transform -->
+        <div class="hero-impact" aria-label="Impact: VIP team workflows are now 4× faster">
+          <div class="hero-impact__before">
+            <span class="impact-value impact-value--before">Slow</span>
+            <span class="impact-label">Before</span>
+          </div>
+          <div class="hero-impact__arrow" aria-hidden="true">
+            <svg width="56" height="16" viewBox="0 0 56 16" fill="none">
+              <path d="M0 8h50M42 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Workflow speed</span>
+          </div>
+          <div class="hero-impact__after">
+            <span class="impact-value impact-value--after js-counter" data-target="4" data-decimal="0" data-suffix="× faster" aria-label="4× faster">0×</span>
+            <span class="impact-label">After</span>
+          </div>
+        </div>
+
+        <!-- Meta row -->
+        <div class="proj-meta" aria-label="Project details">
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Role</span>
+            <span class="proj-meta__val">Solo Product Designer</span>
+          </div>
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Team</span>
+            <span class="proj-meta__val">20 Developers · 1 Designer</span>
+          </div>
+          <div class="proj-meta__item">
+            <span class="proj-meta__key">Scope</span>
+            <span class="proj-meta__val">12+ BackOffices</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero image -->
+      <div class="container">
+        <div class="proj-hero-img" aria-label="Project hero image placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Hero Image Placeholder</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── OVERVIEW ─── -->
+    <section class="proj-section" aria-labelledby="sec-overview">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Context</p>
+          <h2 id="sec-overview" class="proj-section__title">Twelve tools. Zero cohesion.</h2>
+        </div>
+        <div class="proj-overview">
+          <p class="proj-overview__text reveal">
+            NOS Inovação teams relied on multiple disconnected BackOffice tools to manage operations — each built independently, each working differently, none working well together. Support agents juggled separate systems for every task: different credentials, different interfaces, different logic. There was no unified access, no shared patterns, and no design consistency across any of them. <strong>CARBON was built to fix all of it.</strong>
+          </p>
+          <div class="proj-ecosystem reveal reveal-delay-1" aria-label="CARBON platform scope">
+            <div class="ecosystem-hub" aria-label="CARBON — unified internal platform">CARBON</div>
+            <p class="ecosystem-label">One platform for</p>
+            <div class="ecosystem-spokes" aria-label="BackOffice areas">
+              <span>VIP Support</span>
+              <span>Billing</span>
+              <span>Technicians</span>
+              <span>Contracts</span>
+              <span>12+ More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE VISION ─── -->
+    <section class="proj-section proj-section--vision" aria-label="Project vision">
+      <div class="container">
+        <p class="vision-statement reveal">
+          <strong>One platform.</strong> One access point. <strong>One design system.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── THE PROBLEM ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-problem">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">The Problem</p>
+          <h2 id="sec-problem" class="proj-section__title">Multiple tools. Zero shared logic.</h2>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-narrative reveal">
+            <p>Internal operations teams navigated a patchwork of disconnected systems — each BackOffice built at a different time, with different conventions, different access requirements, and no design consistency. There was no single entry point and no shared interaction patterns across the entire ecosystem.</p>
+            <p>The result was slow, error-prone work. Agents relied on Excel spreadsheets to bridge gaps between tools. Simple tasks required switching between multiple systems and manually copying data. When anything changed mid-process, it often meant starting over.</p>
+            <blockquote class="problem-quote">
+              "Operations were slow, manual, and error-prone — not because of the people, but because of the tools."
+            </blockquote>
+          </div>
+          <div class="problem-evidence reveal reveal-delay-1">
+            <p class="evidence-title">Key symptoms</p>
+            <ul class="evidence-list" aria-label="Problems with the existing BackOffice landscape">
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Multiple BackOffices with different logic — no shared patterns or conventions</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>No unified access — separate credentials and entry points for every system</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Inconsistent UI patterns — every tool looked and behaved differently</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Heavy reliance on Excel to fill gaps between disconnected systems</span>
+              </li>
+              <li>
+                <span class="evidence-icon" aria-hidden="true">↓</span>
+                <span>Fragmented workflows — multi-step tasks split across unconnected tools</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE CHALLENGE ─── -->
+    <section class="proj-section proj-section--challenge" aria-labelledby="sec-challenge">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">The Challenge</p>
+          <h2 id="sec-challenge" class="proj-section__title">Designed solo. Zero documentation.</h2>
+        </div>
+        <p class="challenge-lead reveal">Every constraint that could make a design project harder was present simultaneously — no documentation, no product ownership, no existing design system, and a 20:1 developer-to-designer ratio across 12+ concurrent workstreams.</p>
+        <div class="challenge-detail">
+          <div class="challenge-point reveal">
+            <h3>No documentation or ownership</h3>
+            <p>There were no product specs, no requirement documents, and no clear ownership for most BackOffices. Every system had to be understood from scratch before it could be redesigned.</p>
+          </div>
+          <div class="challenge-point reveal reveal-delay-1">
+            <h3>Raw API responses only</h3>
+            <p>Product requirements had to be mapped directly from raw JSON API responses. Understanding what data existed — and what it meant for users — required close, ongoing collaboration with engineering at every stage.</p>
+          </div>
+          <div class="challenge-point reveal reveal-delay-2">
+            <h3>20 developers. 1 designer.</h3>
+            <p>As the sole designer, I was responsible for every BackOffice across every development workstream simultaneously — building and maintaining a design system that could scale far faster than any individual could alone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── MY ROLE ─── -->
+    <section class="proj-section" aria-labelledby="sec-role">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">My Role</p>
+          <h2 id="sec-role" class="proj-section__title">Solo designer across the entire platform</h2>
+        </div>
+        <div class="role-layout reveal">
+          <p class="role-statement">Sole Product Designer across all of CARBON — responsible for every BackOffice, every component, and every design decision. From building the design system from scratch to designing complex operational workflows, the entire design function was a team of one.</p>
+          <div class="role-chips" aria-label="Skills applied on this project">
+            <span class="chip">Design System</span>
+            <span class="chip">UX/UI Design</span>
+            <span class="chip">Information Architecture</span>
+            <span class="chip">Stakeholder Research</span>
+            <span class="chip">Cross-team Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROCESS ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-process">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Process</p>
+          <h2 id="sec-process" class="proj-section__title">How I approached the problem</h2>
+        </div>
+        <div class="process-steps" role="list" aria-label="Design process steps">
+          <div class="process-step reveal" role="listitem">
+            <span class="process-step__num" aria-hidden="true">01</span>
+            <h3 class="process-step__title">Shadow Research</h3>
+            <p class="process-step__desc">Spent several days sitting with support agents on real live calls — observing workflows, noting friction, and building a firsthand understanding of how operations actually ran.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-1" role="listitem">
+            <span class="process-step__num" aria-hidden="true">02</span>
+            <h3 class="process-step__title">Stakeholder Interviews</h3>
+            <p class="process-step__desc">Structured sessions with team leads across departments — mapping priorities and the specific operational logic each BackOffice needed to support.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-2" role="listitem">
+            <span class="process-step__num" aria-hidden="true">03</span>
+            <h3 class="process-step__title">Requirements from JSON</h3>
+            <p class="process-step__desc">With no documentation available, product requirements were derived directly from raw API responses — mapping data structures into user-facing logic alongside engineering.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3" role="listitem">
+            <span class="process-step__num" aria-hidden="true">04</span>
+            <h3 class="process-step__title">Information Architecture</h3>
+            <p class="process-step__desc">Structured 12+ BackOffices into one coherent system — defining shared navigation, access patterns, and the IA that would make everything feel like a single product.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3" role="listitem">
+            <span class="process-step__num" aria-hidden="true">05</span>
+            <h3 class="process-step__title">Design &amp; System</h3>
+            <p class="process-step__desc">Built the design system and all BackOffice UX/UI in parallel — each component shared across workstreams as soon as it was ready, keeping pace with 20 active development streams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── VIP CARBON DEEP DIVE ─── -->
+    <section class="proj-section" aria-labelledby="sec-vip">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Deep Dive</p>
+          <h2 id="sec-vip" class="proj-section__title">VIP Carbon — the case within the case</h2>
+        </div>
+        <p class="proj-section__intro reveal">CARBON unified 12+ BackOffices. VIP Carbon shows what that unification meant in practice — taking one of the most complex operational workflows and collapsing it into a single, guided experience.</p>
+
+        <div class="vip-context reveal">
+          <p>The VIP team handles calls from NOS's most sensitive clients — high-value accounts where every interaction carries significant weight. Before CARBON, a single support call required agents to navigate <strong>3 separate tools</strong>, manually copying data between them at each step.</p>
+        </div>
+
+        <blockquote class="problem-quote reveal">
+          "If someone calls with an issue, I search their NIF in one tool, copy the ID into another to get their history, check a third tool to book a technician visit, then log it in our own BO. If anything changes — missed visit, wrong address — I have to start almost from scratch."
+          <cite>— VIP Support Agent</cite>
+        </blockquote>
+
+        <div class="vip-old-flow reveal" aria-label="Old process: 3 separate tools per call">
+          <p class="evidence-title">Old process — 3 tools, every call</p>
+          <div class="vip-tools">
+            <div class="vip-tool">
+              <span class="vip-tool__num">1</span>
+              <span class="vip-tool__label">Client lookup — search by NIF</span>
+            </div>
+            <div class="vip-tool-arrow" aria-hidden="true">→ copy ID →</div>
+            <div class="vip-tool">
+              <span class="vip-tool__num">2</span>
+              <span class="vip-tool__label">Client history tool</span>
+            </div>
+            <div class="vip-tool-arrow" aria-hidden="true">→ switch tool →</div>
+            <div class="vip-tool">
+              <span class="vip-tool__num">3</span>
+              <span class="vip-tool__label">Technician booking + ticket log</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── THE SOLUTION ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-solution">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">The Solution</p>
+          <h2 id="sec-solution" class="proj-section__title">Three features. One seamless workflow.</h2>
+        </div>
+        <p class="proj-section__intro reveal">VIP Carbon replaced three disconnected tools with one unified experience — built around how agents actually work, not how the underlying systems happened to be structured.</p>
+
+        <div class="auth-methods" aria-label="CARBON VIP solution features">
+          <div class="auth-method auth-method--primary reveal">
+            <div class="auth-method__badge">Homepage</div>
+            <h3 class="auth-method__title">Kanban Dashboard</h3>
+            <p class="auth-method__desc">A Jira-inspired layout giving agents an instant overview of all work — upcoming tickets on the left, today's highlighted in the centre, closed on the right. Auto-updates based on ticket due dates, no manual sorting required.</p>
+            <div class="auth-method__detail">Upcoming · Today · Closed</div>
+          </div>
+          <div class="auth-method reveal reveal-delay-1">
+            <div class="auth-method__badge">Ticket Creation</div>
+            <h3 class="auth-method__title">3-Step Flow</h3>
+            <p class="auth-method__desc">The entire multi-tool process collapsed into three guided steps — replacing tool-switching and manual data-copying with a single, end-to-end flow that never leaves CARBON.</p>
+            <div class="auth-method__detail">NIF lookup · Issue + booking · Origin</div>
+          </div>
+          <div class="auth-method reveal reveal-delay-2">
+            <div class="auth-method__badge">Client View</div>
+            <h3 class="auth-method__title">Unified History</h3>
+            <p class="auth-method__desc">A centralised view of the entire client record — full history, all interactions, all context — in a single place. No more copying IDs between tools to piece together a client's timeline.</p>
+            <div class="auth-method__detail">Full profile · History · Actions</div>
+          </div>
+        </div>
+
+        <!-- ─── Ticket creation flow ─── -->
+        <div class="carbon-ticket-flow">
+          <p class="section-label">Ticket Creation Flow</p>
+          <h3 class="carbon-ticket-flow__title">Three steps replacing the entire multi-tool process</h3>
+
+          <div class="signup-flow" role="list" aria-label="3-step ticket creation flow">
+            <div class="flow-step reveal" role="listitem">
+              <div class="flow-step__num" aria-hidden="true">1</div>
+              <div class="flow-step__content">
+                <h3>Enter Client NIF</h3>
+                <p>Auto-fetches full client profile instantly.</p>
+              </div>
+            </div>
+            <div class="flow-connector" aria-hidden="true"></div>
+            <div class="flow-step reveal reveal-delay-1" role="listitem">
+              <div class="flow-step__num" aria-hidden="true">2</div>
+              <div class="flow-step__content">
+                <h3>Issue + Booking</h3>
+                <p>Log the issue and book a technician — without leaving CARBON.</p>
+              </div>
+            </div>
+            <div class="flow-connector" aria-hidden="true"></div>
+            <div class="flow-step reveal reveal-delay-2" role="listitem">
+              <div class="flow-step__num" aria-hidden="true">3</div>
+              <div class="flow-step__content">
+                <h3>Origin &amp; Submit</h3>
+                <p>Ticket created. No copying, no tool-switching, no manual logging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── OUTCOMES ─── -->
+    <section class="proj-section proj-outcomes" aria-labelledby="sec-outcomes">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Outcomes</p>
+          <h2 id="sec-outcomes" class="proj-section__title">The impact of one platform</h2>
+        </div>
+        <div class="outcomes-grid">
+          <div class="outcome reveal">
+            <span class="outcome__value">12+</span>
+            <span class="outcome__label">BackOffices unified into one platform</span>
+          </div>
+          <div class="outcome reveal reveal-delay-1">
+            <span class="outcome__value">4×</span>
+            <span class="outcome__label">Faster workflows reported by VIP team</span>
+          </div>
+          <div class="outcome reveal reveal-delay-2">
+            <span class="outcome__value">1</span>
+            <span class="outcome__label">Shared design system across all BackOffices</span>
+          </div>
+          <div class="outcome reveal reveal-delay-3">
+            <span class="outcome__value">20:1</span>
+            <span class="outcome__label">Developer-to-designer ratio, designed solo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── REFLECTION ─── -->
+    <section class="proj-section proj-section--alt" aria-labelledby="sec-reflection">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Reflection</p>
+          <h2 id="sec-reflection" class="proj-section__title">What this project taught me</h2>
+        </div>
+        <div class="reflection-grid">
+          <div class="reflection-item reveal">
+            <h3>Designing under ambiguity is a skill</h3>
+            <p>With no documentation and raw API responses as the only source of truth, I had to build comfort with uncertainty. Every decision was made with incomplete information — learning to move forward confidently despite that was as valuable as any design method I know.</p>
+          </div>
+          <div class="reflection-item reveal reveal-delay-1">
+            <h3>Systems thinking scales where individual effort cannot</h3>
+            <p>Covering 12+ BackOffices solo was only possible because of the design system. Every component designed once became a component available everywhere, immediately. Without systems thinking from day one, the project would have been impossible at this scale.</p>
+          </div>
+          <div class="reflection-item reveal reveal-delay-2">
+            <h3>A designer is a partner, not a service</h3>
+            <p>Working alongside 20 developers — embedded in real workflows and stakeholder decisions — showed me that design's greatest leverage isn't in the pixels. It's in being present at the right conversations and shaping the right decisions before a single screen is ever drawn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="project-footer" role="contentinfo">
+    <div class="container">
+      <div class="project-footer__inner">
+        <a href="index.html#case-studies" class="btn btn--inverse" aria-label="Back to portfolio">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back to Work</span>
+        </a>
+        <span class="project-footer__copy">© 2025 João Alexandre Sousa. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+  <script src="js/project.js"></script>
+
+</body>
+</html>

@@ -24,6 +24,7 @@
 .case-card {
   background: var(--col-card-bg);
   border: 1px solid var(--col-border);
+  border-radius: 16px;
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
