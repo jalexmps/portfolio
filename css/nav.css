@@ -6,15 +6,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  mix-blend-mode: multiply;
 }
 
 .nav-logo {
   font-family: var(--font-display);
   font-size: 1.25rem;
   letter-spacing: -0.02em;
-  color: var(--col-ink);
+  color: #B3B3B3;
   text-decoration: none;
+  transition: color 0.3s var(--ease-out);
 }
 
 .nav-links {
@@ -27,10 +27,15 @@ nav {
   font-size: var(--body-sm);
   font-weight: 500;
   text-decoration: none;
-  color: var(--col-ink-muted);
+  color: #B3B3B3;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: color 0.2s;
+  transition: color 0.3s var(--ease-out);
 }
 
-.nav-links a:hover { color: var(--col-accent); }
+.nav-links a:hover { color: #BF6135; }
+
+/* Scrolled past hero — restore readable ink colors */
+nav.nav--scrolled .nav-logo { color: var(--col-ink); }
+nav.nav--scrolled .nav-links a { color: var(--col-ink-muted); }
+nav.nav--scrolled .nav-links a:hover { color: #BF6135; }
