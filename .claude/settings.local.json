@@ -5,7 +5,10 @@
       "Bash(python3 --version)",
       "Bash(node --version)",
       "Bash(npx --yes serve . --listen 3000)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(gh auth *)"
     ]
   }
 }
