@@ -595,7 +595,6 @@ body.project-page section + section {
   display: flex;
   align-items: flex-start;
   margin-bottom: calc(var(--space) * 14);
-  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: calc(var(--space) * 2);
 }
