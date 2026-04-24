@@ -60,21 +60,16 @@
 }
 
 .card-image {
-  background: var(--col-surface);
+  background-color: var(--col-surface);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 280px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  inset: 0;
 }
 
 .card-image-placeholder {
