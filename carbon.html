@@ -412,6 +412,77 @@
       </div>
     </section>
 
+    <!-- ─── GALLERY ─── -->
+    <section class="proj-section" aria-labelledby="sec-gallery">
+      <div class="container">
+        <div class="proj-section__header reveal">
+          <p class="section-label">Gallery</p>
+          <h2 id="sec-gallery" class="proj-section__title">Design artefacts</h2>
+        </div>
+        <div class="proj-gallery" role="list" aria-label="Project image gallery">
+          <button class="gallery-item reveal" data-src="assets/carbon/gallery/placeholder.jpg" aria-label="View design artefact 1 in full size" role="listitem">
+            <img src="assets/carbon/gallery/gallery_placeholder.jpg" alt="CARBON backoffice design artefact 1" loading="lazy" />
+            <span class="gallery-item__overlay" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="gallery-item reveal reveal-delay-1" data-src="assets/carbon/gallery/placeholder.jpg" aria-label="View design artefact 2 in full size" role="listitem">
+            <img src="assets/carbon/gallery/gallery_placeholder.jpg" alt="CARBON backoffice design artefact 2" loading="lazy" />
+            <span class="gallery-item__overlay" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="gallery-item reveal reveal-delay-2" data-src="assets/carbon/gallery/placeholder.jpg" aria-label="View design artefact 3 in full size" role="listitem">
+            <img src="assets/carbon/gallery/gallery_placeholder.jpg" alt="CARBON backoffice design artefact 3" loading="lazy" />
+            <span class="gallery-item__overlay" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="gallery-item reveal reveal-delay-1" data-src="assets/carbon/gallery/placeholder.jpg" aria-label="View design artefact 4 in full size" role="listitem">
+            <img src="assets/carbon/gallery/gallery_placeholder.jpg" alt="CARBON backoffice design artefact 4" loading="lazy" />
+            <span class="gallery-item__overlay" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="gallery-item reveal reveal-delay-2" data-src="assets/carbon/gallery/placeholder.jpg" aria-label="View design artefact 5 in full size" role="listitem">
+            <img src="assets/carbon/gallery/gallery_placeholder.jpg" alt="CARBON backoffice design artefact 5" loading="lazy" />
+            <span class="gallery-item__overlay" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="gallery-item reveal reveal-delay-3" data-src="assets/carbon/gallery/placeholder.jpg" aria-label="View design artefact 6 in full size" role="listitem">
+            <img src="assets/carbon/gallery/gallery_placeholder.jpg" alt="CARBON backoffice design artefact 6" loading="lazy" />
+            <span class="gallery-item__overlay" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="gallery-lightbox" id="gallery-lightbox" aria-modal="true" role="dialog" aria-label="Full size image viewer" hidden>
+      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    </div>
+
   </main>
 
   <!-- ─── FOOTER ─── -->

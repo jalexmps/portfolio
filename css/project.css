@@ -881,6 +881,132 @@ body.project-page section + section {
   line-height: 1.85;
 }
 
+/* ─── GALLERY ─── */
+.proj-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--space) * 3);
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--col-surface);
+  border: 1px solid var(--col-border);
+  padding: 0;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border-radius: 8px;
+}
+
+.gallery-item:hover {
+  border-color: var(--col-accent);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-item__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 23, 20, 0.45);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.gallery-item:hover .gallery-item__overlay,
+.gallery-item:focus-visible .gallery-item__overlay {
+  opacity: 1;
+}
+
+.gallery-item:focus-visible {
+  outline: 2px solid var(--col-accent);
+  outline-offset: 2px;
+}
+
+/* ─── LIGHTBOX ─── */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--space) * 5);
+}
+
+.gallery-lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 23, 20, 0.92);
+  cursor: pointer;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: calc(var(--space) * 4);
+  right: calc(var(--space) * 4);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(249, 247, 244, 0.1);
+  border: 1px solid rgba(249, 247, 244, 0.2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+.lightbox-close:hover {
+  background: rgba(249, 247, 244, 0.2);
+}
+
+.lightbox-img {
+  position: relative;
+  z-index: 1;
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* Gallery responsive */
+@media (max-width: 768px) {
+  .proj-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .proj-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ─── PROJECT FOOTER ─── */
 .project-footer {
   background: var(--col-ink);

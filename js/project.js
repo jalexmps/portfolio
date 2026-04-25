@@ -1,3 +1,42 @@
+// ─── GALLERY LIGHTBOX ─────────────────────────────────────────────────────
+(function () {
+  const lightbox = document.getElementById('gallery-lightbox');
+  if (!lightbox) return;
+
+  const img = document.getElementById('lightbox-img');
+  const backdrop = document.getElementById('lightbox-backdrop');
+  const closeBtn = document.getElementById('lightbox-close');
+
+  function open(src, alt) {
+    img.src = src;
+    img.alt = alt || '';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function close() {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    img.src = '';
+  }
+
+  document.querySelectorAll('.gallery-item').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const src = btn.dataset.src;
+      const alt = btn.querySelector('img') ? btn.querySelector('img').alt : '';
+      open(src, alt);
+    });
+  });
+
+  backdrop.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !lightbox.hidden) close();
+  });
+})();
+
 // ─── SCROLL PROGRESS BAR ───────────────────────────────────────────────────
 const progressBar = document.getElementById('scroll-progress');
 if (progressBar) {
