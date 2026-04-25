@@ -84,12 +84,7 @@
       <!-- Hero image -->
       <div class="container">
         <div class="proj-hero-img" aria-label="Project hero image placeholder">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="14" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M4 28l8-6 6 5 6-7 12 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Hero Image Placeholder</span>
+           <img src="assets/nosid/card_img_nosid.png" alt="NOS ID Hero image">
         </div>
       </div>
     </section>
@@ -328,16 +323,8 @@
           <div class="flow-step reveal" role="listitem">
             <div class="flow-step__num" aria-hidden="true">1</div>
             <div class="flow-step__content">
-              <h3>Create Account</h3>
-              <p>Name and email only — no unnecessary fields upfront.</p>
-            </div>
-          </div>
-          <div class="flow-connector" aria-hidden="true"></div>
-          <div class="flow-step reveal reveal-delay-1" role="listitem">
-            <div class="flow-step__num" aria-hidden="true">2</div>
-            <div class="flow-step__content">
-              <h3>Validate Phone</h3>
-              <p>With clear rationale — users understand exactly why this step matters.</p>
+              <h3>Provide details</h3>
+              <p>Name and phone number only — no unnecessary fields upfront.</p>
             </div>
           </div>
           <div class="flow-connector" aria-hidden="true"></div>
@@ -345,7 +332,7 @@
             <div class="flow-step__num" aria-hidden="true">3</div>
             <div class="flow-step__content">
               <h3>Enter SMS Code</h3>
-              <p>Auto-focused input with countdown and resend option. No app-switching required.</p>
+              <p>Auto-focused input with auto-fill. No app-switching required.</p>
             </div>
           </div>
           <div class="flow-connector" aria-hidden="true"></div>
@@ -353,7 +340,7 @@
             <div class="flow-step__num" aria-hidden="true">4</div>
             <div class="flow-step__content">
               <h3>Set Password</h3>
-              <p>Optional for passwordless users. Inline strength guidance.</p>
+              <p>With clear guidance on password requirements.</p>
             </div>
           </div>
           <div class="flow-connector" aria-hidden="true"></div>
@@ -475,8 +462,8 @@
             <p>Working closely with the security team showed me that the best security UX is invisible. The constraints of anti-enumeration design actually pushed the experience toward greater clarity — the result was simultaneously more secure and more usable.</p>
           </div>
           <div class="reflection-item reveal reveal-delay-1">
-            <h3>Small clarity improvements compound into massive impact</h3>
-            <p>Moving from 25% to 95% didn't require a single dramatic change. It was dozens of small improvements — clearer labels, visible progress, gentler error states — that compounded into a 70-point jump in completion rate.</p>
+            <h3>Clarity Drives Success</h3>
+            <p>Improving success from 25% to 95% required a clear view of the entire user journey and a deep understanding of hardware constraints .</p>
           </div>
           <div class="reflection-item reveal reveal-delay-2">
             <h3>Trust is as important as usability</h3>
@@ -554,7 +541,18 @@
           <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </button>
+      <button class="lightbox-nav lightbox-nav--prev" id="lightbox-prev" aria-label="Previous image">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M13 16l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="lightbox-nav lightbox-nav--next" id="lightbox-next" aria-label="Next image">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
       <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <div class="lightbox-counter" id="lightbox-counter" aria-live="polite"></div>
     </div>
 
   </main>

@@ -401,7 +401,7 @@
             <p>With no documentation and raw API responses as the only source of truth, I had to build comfort with uncertainty. Every decision was made with incomplete information — learning to move forward confidently despite that was as valuable as any design method I know.</p>
           </div>
           <div class="reflection-item reveal reveal-delay-1">
-            <h3>Systems thinking scales where individual effort cannot</h3>
+            <h3>Designed Once, Used Everywhere</h3>
             <p>Covering 12+ BackOffices solo was only possible because of the design system. Every component designed once became a component available everywhere, immediately. Without systems thinking from day one, the project would have been impossible at this scale.</p>
           </div>
           <div class="reflection-item reveal reveal-delay-2">
@@ -480,7 +480,18 @@
           <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </button>
+      <button class="lightbox-nav lightbox-nav--prev" id="lightbox-prev" aria-label="Previous image">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M13 16l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="lightbox-nav lightbox-nav--next" id="lightbox-next" aria-label="Next image">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
       <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <div class="lightbox-counter" id="lightbox-counter" aria-live="polite"></div>
     </div>
 
   </main>

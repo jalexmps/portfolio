@@ -6,10 +6,25 @@
   const img = document.getElementById('lightbox-img');
   const backdrop = document.getElementById('lightbox-backdrop');
   const closeBtn = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  const counter = document.getElementById('lightbox-counter');
 
-  function open(src, alt) {
-    img.src = src;
-    img.alt = alt || '';
+  const items = Array.from(document.querySelectorAll('.gallery-item'));
+  let currentIndex = 0;
+
+  function show(index) {
+    currentIndex = index;
+    const btn = items[index];
+    img.src = btn.dataset.src;
+    img.alt = btn.querySelector('img') ? btn.querySelector('img').alt : '';
+    if (counter) counter.textContent = (index + 1) + ' / ' + items.length;
+    if (prevBtn) prevBtn.disabled = index === 0;
+    if (nextBtn) nextBtn.disabled = index === items.length - 1;
+  }
+
+  function open(index) {
+    show(index);
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
     closeBtn.focus();
@@ -21,19 +36,20 @@
     img.src = '';
   }
 
-  document.querySelectorAll('.gallery-item').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const src = btn.dataset.src;
-      const alt = btn.querySelector('img') ? btn.querySelector('img').alt : '';
-      open(src, alt);
-    });
+  items.forEach(function (btn, i) {
+    btn.addEventListener('click', function () { open(i); });
   });
 
   backdrop.addEventListener('click', close);
   closeBtn.addEventListener('click', close);
+  if (prevBtn) prevBtn.addEventListener('click', function () { if (currentIndex > 0) show(currentIndex - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { if (currentIndex < items.length - 1) show(currentIndex + 1); });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !lightbox.hidden) close();
+    if (lightbox.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft' && currentIndex > 0) show(currentIndex - 1);
+    if (e.key === 'ArrowRight' && currentIndex < items.length - 1) show(currentIndex + 1);
   });
 })();
 
