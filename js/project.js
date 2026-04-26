@@ -51,6 +51,18 @@
     if (e.key === 'ArrowLeft' && currentIndex > 0) show(currentIndex - 1);
     if (e.key === 'ArrowRight' && currentIndex < items.length - 1) show(currentIndex + 1);
   });
+
+  // Touch swipe
+  let touchStartX = 0;
+  lightbox.addEventListener('touchstart', function (e) {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', function (e) {
+    const delta = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(delta) < 50) return;
+    if (delta < 0 && currentIndex < items.length - 1) show(currentIndex + 1);
+    if (delta > 0 && currentIndex > 0) show(currentIndex - 1);
+  }, { passive: true });
 })();
 
 // ─── SCROLL PROGRESS BAR ───────────────────────────────────────────────────
