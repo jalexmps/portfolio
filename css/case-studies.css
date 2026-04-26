@@ -203,3 +203,9 @@
 }
 
 .card-cta:hover svg { transform: translate(3px, -3px); }
+
+.card-cta:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
