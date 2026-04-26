@@ -712,6 +712,93 @@ body.project-page section + section {
   max-height: 380px;
 }
 
+/* ─── SIGNUP FLOW BREAKDOWN ─── */
+.signup-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(56px, 8vw, 96px);
+  margin-top: calc(var(--space) * 10);
+}
+
+.signup-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--space) * 10);
+  align-items: center;
+}
+
+.signup-step--reverse .signup-step__text { order: 2; }
+.signup-step--reverse .signup-step__visual { order: 1; }
+
+.signup-step__num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--col-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: calc(var(--space) * 4);
+  flex-shrink: 0;
+}
+
+.signup-step__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  line-height: 1.25;
+  margin-bottom: calc(var(--space) * 3);
+}
+
+.signup-step__desc {
+  font-size: var(--body-sm);
+  color: var(--col-ink-muted);
+  line-height: 1.8;
+  max-width: 52ch;
+}
+
+.signup-step__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--col-card-bg);
+  border: 1px solid var(--col-border);
+  border-radius: 12px;
+  padding: clamp(32px, 5vw, 64px) 24px;
+  min-height: 380px;
+}
+
+.signup-step__visual img {
+  width: auto;
+  max-width: 280px;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .signup-step {
+    grid-template-columns: 1fr;
+    gap: calc(var(--space) * 6);
+  }
+
+  .signup-step--reverse .signup-step__text { order: 1; }
+  .signup-step--reverse .signup-step__visual { order: 2; }
+
+  .signup-step__visual {
+    min-height: 280px;
+    padding: calc(var(--space) * 6) calc(var(--space) * 4);
+  }
+
+  .signup-step__visual img {
+    max-width: 160px;
+    max-height: 320px;
+  }
+}
+
 /* ─── SECURITY UX ─── */
 .proj-section--security {
   background: var(--col-ink);

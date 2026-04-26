@@ -296,10 +296,10 @@
             <div class="auth-method__detail">Email + password</div>
           </div>
           <div class="auth-method reveal reveal-delay-2">
-            <div class="auth-method__badge">Social</div>
-            <h3 class="auth-method__title">Social Login</h3>
-            <p class="auth-method__desc">One-tap authentication through trusted third-party accounts — the fastest entry point for users already signed into supported platforms.</p>
-            <div class="auth-method__detail">Apple · Google · Facebook</div>
+            <div class="auth-method__badge">Comming soon...</div>
+            <h3 class="auth-method__title">Passkey</h3>
+            <p class="auth-method__desc">Device-based authentication using biometrics or screen lock. No password required, phishing-resistant, and designed for both security and seamless access.</p>
+            <div class="auth-method__detail">Biometrics</div>
           </div>
         </div>
       </div>
@@ -319,53 +319,64 @@
           <p>The original flow required users to validate both their email address <em>and</em> phone number before completing signup. Analytics showed this was a primary drop-off point — and a technical crash when users left the app to open their email client compounded the problem. The new flow removes email validation from the critical path entirely: users go start to finish using SMS only. Email can be verified later, at a lower-stakes moment.</p>
         </div>
 
-        <div class="signup-flow" role="list" aria-label="Signup flow steps">
-          <div class="flow-step reveal" role="listitem">
-            <div class="flow-step__num" aria-hidden="true">1</div>
-            <div class="flow-step__content">
-              <h3>Provide details</h3>
-              <p>Name and phone number only — no unnecessary fields upfront.</p>
-            </div>
-          </div>
-          <div class="flow-connector" aria-hidden="true"></div>
-          <div class="flow-step reveal reveal-delay-2" role="listitem">
-            <div class="flow-step__num" aria-hidden="true">2</div>
-            <div class="flow-step__content">
-              <h3>Enter SMS Code</h3>
-              <p>Auto-focused input with auto-fill. No app-switching required.</p>
-            </div>
-          </div>
-          <div class="flow-connector" aria-hidden="true"></div>
-          <div class="flow-step reveal reveal-delay-3" role="listitem">
-            <div class="flow-step__num" aria-hidden="true">3</div>
-            <div class="flow-step__content">
-              <h3>Set Password</h3>
-              <p>With clear guidance on password requirements.</p>
-            </div>
-          </div>
-          <div class="flow-connector" aria-hidden="true"></div>
-          <div class="flow-step reveal reveal-delay-3" role="listitem">
-            <div class="flow-step__num" aria-hidden="true">4</div>
-            <div class="flow-step__content">
-              <h3>Success</h3>
-              <p>Confirmation with immediate routing to the originating product.</p>
-            </div>
-          </div>
-        </div>
+        <!-- Signup flow breakdown -->
+        <div class="signup-breakdown">
 
-        <div class="flow-screens" aria-label="Screen examples">
-          <div class="flow-screen-placeholder" aria-label="Signup step 1">
-            <img src="assets/nosid/signup/Step_1.png" alt="Signup step 1">
+          <div class="signup-step reveal">
+            <div class="signup-step__text">
+              <div class="signup-step__num" aria-hidden="true">1</div>
+              <h3 class="signup-step__title">Provide details</h3>
+              <p class="signup-step__desc">We start with just the essentials—name and phone number—to reduce friction. Email is intentionally deferred, allowing users to complete signup without switching contexts, a common pain point in webview-based flows.</p>
+            </div>
+            <div class="signup-step__visual">
+              <img src="assets/nosid/signup/Step_1.png" alt="Signup step 1: provide name and phone number" loading="lazy" />
+            </div>
           </div>
-          <div class="flow-screen-placeholder" aria-label="Signup step 2">
-            <img src="assets/nosid/signup/Step_2.png" alt="Signup step 2">
+
+          <div class="signup-step signup-step--reverse reveal">
+            <div class="signup-step__text">
+              <div class="signup-step__num" aria-hidden="true">2</div>
+              <h3 class="signup-step__title">Validate phone number</h3>
+              <p class="signup-step__desc">Fast and seamless verification. The code input is auto-focused and, on mobile, auto-filled from the SMS—removing the need to switch apps or manually copy the code, helping reduce drop-off during verification.</p>
+            </div>
+            <div class="signup-step__visual">
+              <img src="assets/nosid/signup/Step_2.png" alt="Signup step 2: SMS verification code entry" loading="lazy" />
+            </div>
           </div>
-          <div class="flow-screen-placeholder" aria-label="Signup step 3">
-            <img src="assets/nosid/signup/Step_3.png" alt="Signup step 3">
+
+          <div class="signup-step reveal">
+            <div class="signup-step__text">
+              <div class="signup-step__num" aria-hidden="true">3</div>
+              <h3 class="signup-step__title">Set up password</h3>
+              <p class="signup-step__desc">Guided password creation with real-time feedback. Requirements are visible upfront and update as the user types, reducing guesswork and preventing errors before submission.</p>
+            </div>
+            <div class="signup-step__visual">
+              <img src="assets/nosid/signup/Step_3.png" alt="Signup step 3: password creation with live requirements" loading="lazy" />
+            </div>
           </div>
-          <div class="flow-screen-placeholder" aria-label="Signup step 4">
-            <img src="assets/nosid/signup/Step_4.png" alt="Signup step 4">
+
+          <div class="signup-step signup-step--reverse reveal">
+            <div class="signup-step__text">
+              <div class="signup-step__num" aria-hidden="true">4</div>
+              <h3 class="signup-step__title">Signup completed</h3>
+              <p class="signup-step__desc">Clear confirmation with immediate continuation. Users are seamlessly routed back to the app, maintaining momentum without unnecessary steps.</p>
+            </div>
+            <div class="signup-step__visual">
+              <img src="assets/nosid/signup/Step_4.png" alt="Signup step 4: success confirmation screen" loading="lazy" />
+            </div>
           </div>
+
+          <div class="signup-step reveal">
+            <div class="signup-step__text">
+              <div class="signup-step__num" aria-hidden="true">5</div>
+              <h3 class="signup-step__title">Email requested later</h3>
+              <p class="signup-step__desc">Email collection is intentionally delayed to reduce initial friction. After users engage with the app and return, they're more likely to provide it — supporting higher completion rates while still meeting business and security needs, including mitigating user enumeration risks.</p>
+            </div>
+            <div class="signup-step__visual">
+              <img src="assets/nosid/signup/Step_5.png" alt="Signup step 5: deferred email collection prompt" loading="lazy" />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
