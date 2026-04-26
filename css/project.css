@@ -712,6 +712,104 @@ body.project-page section + section {
   max-height: 380px;
 }
 
+/* ─── SIGNUP FLOW BREAKDOWN ─── */
+.signup-breakdown {
+  margin-top: calc(var(--space) * 12);
+}
+
+.signup-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+  padding: clamp(48px, 7vw, 88px) 0;
+  border-top: 1px solid var(--col-border);
+}
+
+.signup-step:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.signup-step--reverse .signup-step__text { order: 2; }
+.signup-step--reverse .signup-step__visual { order: 1; }
+
+.signup-step__counter {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 10vw, 8rem);
+  font-weight: 800;
+  line-height: 0.85;
+  color: var(--col-accent);
+  opacity: 0.12;
+  letter-spacing: -0.04em;
+  margin-bottom: calc(var(--space) * 1);
+  user-select: none;
+}
+
+.signup-step__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: calc(var(--space) * 4);
+  margin-top: calc(var(--space) * -1);
+}
+
+.signup-step__desc {
+  font-size: var(--body-sm);
+  color: var(--col-ink-muted);
+  line-height: 1.85;
+  max-width: 46ch;
+}
+
+.signup-step__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-step__visual img {
+  width: auto;
+  max-width: 260px;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 24px;
+  box-shadow:
+    0 2px 8px rgba(10, 10, 10, 0.08),
+    0 8px 24px rgba(10, 10, 10, 0.10),
+    0 24px 64px rgba(10, 10, 10, 0.14);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.signup-step__visual img:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 4px 12px rgba(10, 10, 10, 0.08),
+    0 12px 32px rgba(10, 10, 10, 0.12),
+    0 32px 80px rgba(10, 10, 10, 0.18);
+}
+
+@media (max-width: 768px) {
+  .signup-step {
+    grid-template-columns: 1fr;
+    gap: calc(var(--space) * 6);
+  }
+
+  .signup-step--reverse .signup-step__text { order: 1; }
+  .signup-step--reverse .signup-step__visual { order: 2; }
+
+  .signup-step__counter {
+    font-size: clamp(3.5rem, 15vw, 5rem);
+  }
+
+  .signup-step__visual img {
+    max-width: 200px;
+    max-height: 400px;
+  }
+}
+
 /* ─── SECURITY UX ─── */
 .proj-section--security {
   background: var(--col-ink);
