@@ -414,7 +414,7 @@ body.project-page section + section {
 .process-steps::before {
   content: '';
   position: absolute;
-  top: 23px;
+  top: 24px;
   left: 24px;
   right: 24px;
   height: 1px;
@@ -426,7 +426,6 @@ body.project-page section + section {
   position: relative;
   z-index: 1;
   padding-top: calc(var(--space) * 9);
-  padding-right: calc(var(--space) * 2);
 }
 
 .process-step__num {
@@ -435,16 +434,15 @@ body.project-page section + section {
   left: 0;
   width: 48px;
   height: 48px;
-  background: var(--col-surface);
-  border: 1.5px solid var(--col-border);
+  background: var(--col-accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--col-accent);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.10);
 }
 
 .process-step__title {
@@ -1205,10 +1203,6 @@ body.project-page section + section {
   }
 
   .process-steps::before { display: none; }
-
-  .process-step {
-    padding-top: calc(var(--space) * 9);
-  }
 }
 
 @media (max-width: 768px) {
